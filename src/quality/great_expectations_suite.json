@@ -1,0 +1,13 @@
+{
+  "name": "weather_quality",
+  "expectations": [
+    {"type": "expect_table_columns_to_match_ordered_list", "kwargs": {"column_list": ["event_id", "timestamp", "station_id", "latitude", "longitude", "temperature_c", "humidity_pct", "pressure_hpa", "wind_speed_kmh", "precipitation_mm"]}},
+    {"type": "expect_column_values_to_not_be_null", "kwargs": {"column": "event_id"}},
+    {"type": "expect_column_values_to_be_unique", "kwargs": {"column": "event_id"}},
+    {"type": "expect_column_values_to_be_between", "kwargs": {"column": "temperature_c", "min_value": -80, "max_value": 60}},
+    {"type": "expect_column_values_to_be_between", "kwargs": {"column": "humidity_pct", "min_value": 0, "max_value": 100}},
+    {"type": "expect_column_values_to_be_between", "kwargs": {"column": "pressure_hpa", "min_value": 800, "max_value": 1200}},
+    {"type": "expect_column_values_to_be_between", "kwargs": {"column": "wind_speed_kmh", "min_value": 0, "max_value": 300}},
+    {"type": "expect_column_values_to_be_between", "kwargs": {"column": "precipitation_mm", "min_value": 0, "max_value": 500}}
+  ]
+}

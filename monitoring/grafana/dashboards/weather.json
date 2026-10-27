@@ -1,0 +1,12 @@
+{
+  "annotations": {"list": []},
+  "editable": true,
+  "panels": [
+    {"type": "stat", "title": "Kafka / Spark monitoring", "gridPos": {"h": 3, "w": 24, "x": 0, "y": 0}, "targets": [{"expr": "up", "legendFormat": "{{job}}"}]},
+    {"type": "timeseries", "title": "Prometheus availability", "gridPos": {"h": 8, "w": 24, "x": 0, "y": 3}, "targets": [{"expr": "up", "legendFormat": "{{job}}"}]}
+  ],
+  "schemaVersion": 39,
+  "title": "Weather Pipeline",
+  "time": {"from": "now-6h", "to": "now"},
+  "timezone": "browser"
+}
